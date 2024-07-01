@@ -129,7 +129,7 @@ func main() {
 	err := godotenv.Load(".env")
 
 	if err != nil {
-		log.Fatalf("Error loading .env file")
+		log.Print("Error loading .env file")
 	}
 
 	WEATHER_API_KEY, LOC_API_KEY = os.Getenv("WEATHER_API_KEY"), os.Getenv("LOC_API_KEY")
