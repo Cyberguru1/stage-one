@@ -33,11 +33,7 @@ func getInfo(w http.ResponseWriter, r *http.Request) {
 
 	// passed details
 	user_name := r.URL.Query().Get("visitor_name")
-	client_ip := r.RemoteAddr
-    xforward := r.Header.Get("X-Forwarded-For")
-
-	log.Println("here is the details>>>>>>>>>>>>>>>>>", client_ip, user_name)
-	log.Println(xforward)
+	client_ip := r.Header.Get("X-Forwarded-For")
 
 	var detail Details
 	myloc := [2]float64{}
