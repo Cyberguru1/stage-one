@@ -43,7 +43,7 @@ func getInfo(w http.ResponseWriter, r *http.Request) {
 	tempt := GetTempt(myloc)
 
 	// populate detail struct
-	detail.Greeting = fmt.Sprintf("Hello, %s!, the temperature is %s degrees Celcius in %s", user_name, tempt, location)
+	detail.Greeting = fmt.Sprint("Hello, ",user_name,"!, the temperature is ",tempt," degrees Celcius in ",location)
 	detail.Client_ip = client_ip
 	detail.Location = location
 
