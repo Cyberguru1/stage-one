@@ -35,6 +35,8 @@ func getInfo(w http.ResponseWriter, r *http.Request) {
 	user_name := r.URL.Query().Get("visitor_name")
 	client_ip := r.RemoteAddr
 
+	log.Println("here is the details>>>>>>>>>>>>>>>>>", client_ip, user_name)
+
 	var detail Details
 	myloc := [2]float64{}
 
@@ -137,7 +139,7 @@ func main() {
 	r := mux.NewRouter()
 	r.HandleFunc("/api/hello", getInfo).Methods("GET")
 
-	fmt.Printf("Starting server at port:8000\n")
+	fmt.Printf("Starting server at port:8080\n")
 	log.Fatal(http.ListenAndServe(":8080", r))
 	
 }
