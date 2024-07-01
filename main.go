@@ -33,6 +33,7 @@ func getInfo(w http.ResponseWriter, r *http.Request) {
 
 	// passed details
 	user_name := r.URL.Query().Get("visitor_name")
+	user_name = strings.Trim(strings.Trim(user_name, "\""), "'")
 	client_ip := r.Header.Get("X-Forwarded-For")
 
 	var detail Details
