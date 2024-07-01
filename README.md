@@ -1,30 +1,22 @@
-# Movies Server
+# Test Server
 
-This Go application serves as a basic RESTful API for managing movie data. It allows you to perform CRUD (Create, Read, Update, Delete) operations on movie records using HTTP requests.
+This Go application serves as a basic RESTful API for managing movie data. It allows you to perform Read operations on movie records using HTTP requests.
 
 ## Features
 
-- List all movies
-- Get a specific movie by ID
-- Create a new movie record
-- Update an existing movie record
-- Delete a movie record
-
-## Prerequisites
-
-To run this server, you need to have [Go](https://golang.org/doc/install) installed on your system.
+- To run this server, you need to have [Go](https://golang.org/doc/install) installed on your system.
 
 ## Installation
 
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/Cyberguru1/GO-Movies-Server.git
+   git clone https://github.com/Cyberguru1/stage-one.git
    ```
 2. Navigate to the project directory:
 
    ```bash
-   cd Go-Movies-Server
+   cd stage-one
    ```
 3. Run the server:
 
@@ -46,43 +38,19 @@ http:localhost:8000
 
 ## Endpoints
 
-### List all movies
+### Hello
 
-- **GET** `/movies`
-- **Mock Up FrontEnd**
-- ![1696507010258.png](https://imgur.com/WZNKuqS.png)
+- **GET** `/api/hello?visitor_name=Mark`
 
-### Get a specific movie by ID
-
-- **GET** `/movies/{id}`
-
-### Create a new movie record
-
-- **POST** `/movies`
-- **Mock Up FrontEnd**
-- ![1696507079035.png](https://imgur.com/jZx5AuP.png)
-
-### Update an existing movie record
-
-- **PUT** `/movies/{id}`
-
-### Delete a movie record
-
-- **DELETE** `/movies/{id}`
-
-## JSON Data Format
+## JSON Response
 
 The server accepts and returns JSON data in the following format:
 
 ```json
 {
-  "id": "1",
-  "isbn": "343434",
-  "title": "Movie One",
-  "director": {
-    "firstname": "John",
-    "lastname": "Doewy"
-  }
+  "client_ip": "127.0.0.1", // The IP address of the requester
+  "location": "New York" // The city of the requester
+  "greeting": "Hello, Mark!, the temperature is 11 degrees Celcius in New York"//
 }
 ```
 
